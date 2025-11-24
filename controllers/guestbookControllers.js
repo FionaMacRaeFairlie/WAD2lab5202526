@@ -14,7 +14,6 @@ export const show_login = (req, res) => {
    res.send('<p>Not yet implemented: will show a login form</p>');
 };
 
-// Show register page
 export const show_register_page = (req, res) => {
      res.send('<p>Not yet implemented: will show a registration form</p>');
 };
