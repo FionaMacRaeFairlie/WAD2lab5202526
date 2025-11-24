@@ -77,6 +77,7 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
+import router from "./routes/guestbookRoutes.js";
 
 const app = express();
 
@@ -87,9 +88,11 @@ const publicFolder = path.join(__dirname, "public");
 
 app.use(express.static(publicFolder));
 
-app.get("/", (req, res) => {
-  res.send("index.html");
-});
+app.use("/", router);
+
+// app.get("/", (req, res) => {
+//   res.send("index.html");
+// });
 
 const port = 3000;
 app.listen(port, () => {
